@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./icon/coffee-beans.png">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Koffee.game</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container">
+            <h1>Hello, いらっしゃいませ</h1>
+            <h2>The Koffee Game <span style="font-size: .75rem;">alpha ver.</span></h2>
+            <div class="container instruct-box">
+                <h3>The Rules is 簡単 (かんたん)</h3>
+                <p>
+                    We have own Coffee Shop named <span style="color: rgb(9, 9, 121); font-weight: bolder;">Koffee</span> ☕ ,
+                    and then we need more revenue for runing this business, revenue more than cost is profit right ?
+                    we need to <span class="highlight">minimuze raw-mat cost</span>, and that's it, it's a rule of this game
+                </p>
+
+                <h3>In this Universe</h3>
+                <p>Currency Unit :  💰 Koin</p>
+                <p>RawMat Unit :    📦 KUnit</p>
+                <p>KpK : Koin per KUnit</p>
+            </div>
+
+            <div class="container instruct-box">
+                <h3>The Raw Material Profile</h3>
+
+                <p>
+                    Everything has a cost. In this game, we have only 1 vendor.
+                    The water is free 555+. The available raw materials of vendor 1 are 
+                </p>
+                    <ol>
+                        <p> 🫘  Coffee Beans  : <span id="bean-init">...</span> 🫘 = <span id="bean-init-koin">...</span> 💰 </p>
+                        <p> 🍫  Cocoa Powder : <span id="cocoa-init">...</span> 🍫 = <span id="cocoa-init-koin">...</span> 💰</p>
+                        <p>🥛  Milk : <span id="milk-init">...</span> 🥛 = <span id="milk-init-koin">...</span> 💰</p>
+                    </ol>
+                <p>
+                    <span style="color: #d9d9d9;;">Vendor 2 TBC</span> <br>
+                </p>
+                <p>
+                    We have unlimited budget to buy the raw materials, just make the profit !!!
+                </p>
+
+                <h3>Special Event from vendors</h3>
+                <ol>
+                    <span style="font-weight: bold;"> Russian Roulette : </span> We can pay 10% of Total Raw Material Cost for 
+                    lucky drawing 0 - 50% discount of random raw-mat from Vendor 1 
+                </ol>
+                <ol>
+                    <span style="font-weight: bold;"> Special Gift from your Crush 💖 : </span> But Now we don't the Crush, then this event is invalid 555+
+                </ol>
+                <ol>
+                    <span style="font-weight: bold;"> TBC</span> ...
+                </ol>
+            </div>
+
+            <div class="container">
+                <h1>Time to prepare</h1>
+
+                <p>Here's your transaction</p>
+                <p id="tx-log"></p>
+                <p id="total-result" style="font-size: 1.5rem;">Total Cost : 0 💰</p>
+
+                <h2>Raw Material</h2>
+                <div class="purchase-area">
+                    <p>🫘 <input type="text" id="bean-prepare" size="5"> </p>
+                    <p>🍫 <input type="text" id="cocoa-prepare" size="5"> </p> 
+                    <p>🥛 <input type="text" id="milk-prepare" size="5"> </p>
+                </div>
+                <button onclick="calRawMat()" class="btn">Confirm</button>
+                <button onclick="resetRawMat()" class="btn">Reset</button>
+                
+                <br>
+                <h2>Special Event from vendors</h2>
+                <button class="btn" onclick="getRoulette()" >Russian Roulette</button> 
+
+            </div>
+           
+            
+
+            
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./koffeemain.js"></script>
+</body>
+</html>
