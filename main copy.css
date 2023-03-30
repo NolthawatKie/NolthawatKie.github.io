@@ -38,10 +38,10 @@ main {
 }
 .duo-item {
     display: grid;
-    grid-template-rows: 1fr 3rem;
+    grid-template-rows: 1fr 2rem;
     border: .1rem #ccc solid;
     border-radius: 1rem;
-    margin: 2rem 0;
+    margin-bottom: 2rem 0;
     padding: .5rem 2rem 2rem 2rem;
 }
 

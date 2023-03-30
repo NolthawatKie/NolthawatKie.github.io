@@ -1,6 +1,8 @@
 :root {
     --body-background: linear-gradient(to right, #ad5389, #3c1053);
-    --btn-text-color : white;
+    --btn-text-color : #333;
+    --blog-item-backround : rgba(255,255,255,0.15);
+    --textbox-backround: rgba(255, 255, 255, 0.25);
 }
 
 body {
@@ -10,7 +12,14 @@ body {
 
 header { }
 
-footer { }
+footer {
+    min-height: 2rem;
+    background: #333;
+    /*temp*/
+    padding-left: 10%;
+    padding-top:1rem ;
+    font-size:12px;
+ }
 
 main {
     /* width: 100%;
@@ -44,7 +53,7 @@ main {
     animation: transitionIn 1.25s ease-out;
     animation-delay: 1s;
     animation-fill-mode: forwards;
-    transform: scale(0); /*default hide*/
+    transform: scale(0);/*default hide*/
     
 }
 
@@ -62,7 +71,7 @@ main {
 
 .textbox {
     width: 80%;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: var(--textbox-backround);
     border-radius: 1rem;
     padding: .5rem 1rem;
     /* margin-top: 1rem; */
@@ -70,26 +79,62 @@ main {
     text-align: center;
 }
 
+.blog {
+    width: 80%;
+}
+
+.blog-item {
+    display: grid;
+    grid-template-rows: 1fr 1fr 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 2rem 2rem 2rem;
+    background-color: var(--blog-item-backround);
+}
+
+.blog-item-head {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+    .blog {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+    }
+}
+
 .btn-box {
     color: var(--btn-text-color);
     width: 200px;
+    height: 2rem;
     border: 0;
     border-radius: 1rem;
-    padding: .5rem 1rem;
-    /* margin-top: 1rem; */
+    padding: auto 1rem;
+    margin-top: 1rem;
     margin-bottom: .5rem;
     text-align: center;
     display: block;
-    transition: width 0.2 0.1
+    transition: background 0.2 0.1, color 0.2 0.1;
 }
 
-.btn-box:hover {
-    width: 210px;
+i {
+    color: #333;
+    transition: color 0.2 0.1
+}
+
+
+
+.btn-box:hover i {
+    background-color: #333;
+    color:white;
     cursor: pointer;
 }
-
-#github {
-    background-color: rgba(23,21,21,0.8);
+.btn-box:hover {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
 }
 
 
