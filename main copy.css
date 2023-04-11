@@ -29,7 +29,7 @@ main {
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 750px) {
     .blog {
             display: grid;
             grid-template-columns: 1fr 1fr;
