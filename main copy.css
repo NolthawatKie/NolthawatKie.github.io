@@ -39,6 +39,7 @@ main {
 }
 
 .blog-item {
+    display: flex;
     justify-content: center;
 }
 
