@@ -35,7 +35,13 @@ main {
             grid-template-columns: 1fr 1fr;
             column-gap: 1rem;
         }
+
 }
+
+.blog {
+    justify-content: center;
+}
+
 .duo-item {
     display: grid;
     grid-template-rows: 1fr 2rem;
@@ -60,12 +66,6 @@ p{
 }
 
 button {
-
-    /* 
-    border-width: 0.15rem;
-    border-color: #999;
-    border-style: solid; 
-    */
     border: 0.15rem solid var(--header-background);
     border-radius: 2rem;
     padding: .5rem 1rem;
